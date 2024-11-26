@@ -1,4 +1,6 @@
 
+# Proyecto 04 - Controlador interactivo
+<img src=RaspberryPi.png alt="Raspberry Pi" width="50" height="50"> <img src=QEMU.png alt="Qemu" width="110" height="100">
 ### IC-3101 Arquitectura de Computadoras
 ------------
 
@@ -9,49 +11,61 @@
 - Deislher Sánchez Funez **| 2023032794**
 
 ------------
-#### Descripción
+#### Descripción del juego
 
-El proyecto tiene como objetivo desarrollar un juego de búsqueda de tesoros interactivo diseñado para ejecutarse en una interfaz de línea de comandos utilizando lenguaje ensamblador de **ARM 64 bits**. Este juego busca desafiar a los jugadores a encontrar tesoros ocultos en un mapa a través de pistas (frio, caliente).
+"Buscatesoros" es un juego de exploración donde el jugador debe encontrar todos los tesoros escondidos en un mapa, evitando pisar minas. El jugador puede moverse en cuatro direcciones (arriba, abajo, izquierda, derecha) y cavar en su posición actual para buscar tesoros. El juego se basa en una matriz que representa el mapa, donde los tesoros y las minas están distribuidos aleatoriamente.
 
 ------------
 
-#### Tecnologías Utilizadas
-El desarrollo se realizará en lenguaje ensamblador **ARM** de 64bits, utilizando **Raspbian OS** en **Raspberry Pi** o mediante el emulador **QEMU**.
+#### Requisitos del sistema
 
+- Tener un **Raspberry Pi** físico.
+- Tener mínimo una tarjeta microSD de **8GB** de almacenamiento para el correcto funcionamiento del proyecto en el **Raspberry Pi**.
+- Instalar **python3**
 ------------
 #### Objetivos del Proyecto
-- **Implementar** algoritmos para la generación aleatoria de mapas y la colocación de tesoros utilizando matrices.
-- **Desarrollar** habilidades de pensamiento crítico y estratégico en los jugadores mediante la resolución de pistas para localizar los tesoros.
-- **Crear una experiencia** de juego interactiva y envolvente mediante el uso de comandos de texto para explorar y descubrir tesoros ocultos.
+- **Diseñar y construir** un controlador de juego utilizando los pines GPIO de la Raspberry Pi.
+- **Implementar** un juego interactivo que permita al usuario moverse, cavar y encontrar tesoros, evitando minas.
 
 ------------
 #### Instalación
-Para ejecutar el programa de **Treasure Grid**, por favor sigue estos pasos:
+Para ejecutar el programa de **Buscatesoros**, por favor sigue estos pasos:
 ###### Clonar el repositorio:
 
-- Abra QEMU y clone el repositorio mediante el siguiente comando:
+- Abra cualquier carpeta en su pc personal y clone el repositorio mediante el siguiente comando:
 
    ```bash
-   git clone https://git.mora.tk/desanchez/proyecto-3-treasure-grid.git
+   git clone https://git.mora.tk/sermonbadi/py4-arquitectura-de-computadores.git
 
 Este comando descarga una copia completa del proyecto desde el enlace proporcionado a tu sistema local. Si no tienes Git instalado en tu sistema, puedes hacerlo usando un enlace de instalación que debería haber proporcionado, o buscarlo en la **[Web de Git.](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)**
 
-- Luego de enter, espere a que termine el proceso de clonado, e ingrese a la carpeta clonada con el comando
-    ```bash
-      cd proyecto-3-treasure-grid
+- Luego de Enter, espere a que termine el proceso de clonado, y busque la carpeta para verificar el contenido. Una vez verificado el contenido, copia esta carpeta en alguna llave de maya y conecta la llave al raspberry Pi y copia la carpeta en el Raspberry Pi.
+------------
+#### Instalación de python3
+
+- Abra la terminal de su Raspberry Pi e ingrese el siguiente comando para asegurarse de tener todo el sistema actualizado
+   ```bash
+  	sudo apt-get update
+	sudo apt-get upgrade
+
+- Una vez verifiquemos que esta todo actualizado procedemos a instalar Python.
+  	 ```bash
+  	sudo apt install python3
+
 
 ------------
 
 #### Ejecución
-1. Primero ensamble el programa con el comando
+1. Primero buscar donde copiamos el archivo .py en nuestro Raspberry Pi, una vez encontremos el archivo tendremos que ir a esa misma dirección usando la terminal siga el siguiente comando, como ejemplo:
     ```bash
-	as -o prueba.o *.s
-2. Luego, enlace el programa con el comando
+	cd Documents/PP4/SCR/main
+2. Ahora que estamos en la misma carpeta podemos ejecutar el proyecto con el siguiente comando:
     ```bash
-	ld -o prueba prueba.o
-3. Por último, ejecute el programa con el comando
-    ```bash
-	./prueba
+	python3 buscatesoros.py
+3. Debe verse de la siguiente manera:
+   
+   ![image](https://github.com/user-attachments/assets/bba31b8f-26c9-4138-8138-e6d22eea405f)
+
 
 ------------
 #### Manual del Usuario
