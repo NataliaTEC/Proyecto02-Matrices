@@ -1,6 +1,6 @@
 
 # Proyecto 04 - Controlador interactivo
-<img src=RaspberryPi.png alt="Raspberry Pi" width="50" height="50"> <img src=QEMU.png alt="Qemu" width="110" height="100">
+<img src=RaspberryPi.png alt="Raspberry Pi" width="50" height="50"> <img src=python3.png alt="Python3" width="50" height="50">
 ### IC-3101 Arquitectura de Computadoras
 ------------
 
